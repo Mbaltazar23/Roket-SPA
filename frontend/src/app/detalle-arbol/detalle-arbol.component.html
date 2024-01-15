@@ -1,0 +1,13 @@
+<!-- detalle-arbol.component.html -->
+
+<!-- Verificar si hay fotos y si la colección tiene al menos una imagen -->
+<div *ngIf="fotos && fotos.length > 0">
+  <!-- Contenedor con estilos para permitir el desplazamiento si hay muchas fotos -->
+  <div class="foto-container">
+    <!-- Iterar sobre la colección de fotos y mostrar cada imagen en un elemento <img> -->
+    <div *ngFor="let foto of fotos">
+      <!-- Etiqueta <img> para mostrar cada foto -->
+      <img [src]="foto.url_foto" alt="Foto del árbol" width="230" height="210" />
+    </div>
+  </div>
+</div>

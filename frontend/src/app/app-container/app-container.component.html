@@ -1,0 +1,33 @@
+<div class="container">
+  <div class="row">
+    <!-- Lista de Árboles -->
+    <div class="col-md-6 mb-3">
+      <app-arboles-lista [arboles]="arboles" (arbolSeleccionado)="onArbolSelect($event)"></app-arboles-lista>
+    </div>
+
+    <!-- Detalle y Mapa -->
+    <div class="col-md-6">
+      <div class="row mb-3">
+        <!-- Detalle del Árbol -->
+        <div class="col-md-12 mb-3">
+          <app-detalle-arbol [arbolIdSeleccionado]="selectedArbolId" [fotos]="fotos"></app-detalle-arbol>
+        </div>
+
+        <!-- Mapa -->
+        <div class="col-md-12 mb-3">
+          <app-mapa [arbolId]="selectedArbolId"></app-mapa>
+        </div>
+      </div>
+
+      <!-- Comentario -->
+      <div class="row">
+        <div class="col-md-12">
+          <app-comentario 
+            [mensajeRespuesta]="mensajeRespuesta" 
+            (comentarioEnviado)="manejarComentarioEnviado($event)">
+          </app-comentario>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,11 @@
+<div>
+  <!-- Área de texto para ingresar un nuevo comentario, vinculado bidireccionalmente con la propiedad nuevoComentario -->
+  <textarea [(ngModel)]="nuevoComentario" placeholder="Escribe tu comentario"></textarea>
+</div>
+
+<!-- Botón para enviar el comentario, al hacer clic se llama al método enviarComentario() -->
+<button (click)="enviarComentario()">Agregar Comentario</button>
+
+<!-- Nuevo elemento que muestra el mensaje de respuesta del servidor -->
+<!-- Se utiliza la directiva *ngIf para mostrar el div solo si hay un mensaje de respuesta -->
+<div *ngIf="mensajeRespuesta">{{ mensajeRespuesta }}</div>

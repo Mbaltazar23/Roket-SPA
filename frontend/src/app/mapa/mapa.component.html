@@ -1,0 +1,11 @@
+<!-- Detalle del componente de la ubicación del árbol -->
+<div *ngIf="ubicacion">
+  <!-- Título de la sección -->
+  <h3>Ubicación del Árbol</h3>
+  <!-- Mostrar la latitud del árbol -->
+  <p>Latitud: {{ ubicacion.latitud }}</p>
+  <!-- Mostrar la longitud del árbol -->
+  <p>Longitud: {{ ubicacion.longitud }}</p>
+  <!-- Contenedor del mapa con un identificador único (#mapContainer) y estilo -->
+  <div #mapContainer style="height: 300px; width: 100%; border: 1px solid #000;"></div>
+</div>

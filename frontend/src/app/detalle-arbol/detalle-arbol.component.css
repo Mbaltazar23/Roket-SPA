@@ -1,0 +1,11 @@
+
+.foto-container {
+    display: flex; /* Utilizar un contenedor flexible para permitir el desplazamiento horizontal */
+    overflow-x: auto; /* Agregar desplazamiento horizontal si el contenido supera el ancho del contenedor */
+    max-height: 300px; /* Establecer la altura máxima del contenedor */
+  }
+  
+  .foto-container img {
+    margin-right: 10px; /* Añadir un margen a la derecha de cada imagen para separarlas */
+  }
+  

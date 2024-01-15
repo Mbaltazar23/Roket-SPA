@@ -1,0 +1,8 @@
+
+<div>
+  <label for="selectArboles">Selecciona un árbol:</label>
+  <select id="selectArboles" (change)="onArbolSelect($event)">
+    <!-- Utiliza ngFor para iterar sobre la lista de árboles y generar opciones en el desplegable -->
+    <option *ngFor="let arbol of arboles" [value]="arbol.arbol_id">{{ arbol.nombre_arbol }}</option>
+  </select>
+</div>
